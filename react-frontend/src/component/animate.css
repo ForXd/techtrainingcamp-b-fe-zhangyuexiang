@@ -1,0 +1,38 @@
+@keyframes leftIn {
+    from {
+        transform: scale(0) translateX(-100%);
+    }
+    to {
+        transform: scale(1) translateX(0);
+    }
+}
+
+@keyframes rightIn {
+    from {
+        transform: scale(0) translateX(2000px);
+    }
+    to {
+        transform: scale(1) translateX(0);
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        transform: translateY(500px) scale(0);
+    }
+    70% {
+        transform: translateY(0) scale(1);
+    }
+    80% {
+
+        
+    }
+    90% {
+
+        
+    }
+    to {
+
+        
+    }
+}
