@@ -5,7 +5,7 @@ import Search from './component/Search';
 import ResultList from './component/ResultList';
 import styled from 'styled-components';
 
-const PREFIX = 'http://127.0.0.1:8000';
+const PREFIX = 'http://localhost:8000';
 
 const styles = {
   showKeyword: {
@@ -17,7 +17,7 @@ const styles = {
 }
 
 const Container = styled.div`width: 100%; overflow:hidden;`;
-const Wrapper = styled.div`display: flex; width: 200%; transition: all 0.6s ease-in-out;height: 80vh;`
+const Wrapper = styled.div`display: flex; width: 200%; transition: all 0.6s ease-in-out;height: 90vh;`
 
 let ws = new WebSocket('ws://localhost:3001');
 
@@ -33,13 +33,15 @@ class App extends React.Component {
             hotList: []
         }
         this.debounceSearchKeyword = debounce((option) => {
-            console.log('send ws');
-            ws.send(JSON.stringify(option.data), (err) => {
-                console.log(err);
-            });
             cacheQuery(option)
             .then(res => {
                 res = JSON.parse(res);
+                if (res.data.length > 0) {
+                    console.log('send ws');
+                    ws.send(JSON.stringify(option.data), (err) => {
+                        console.log(err);
+                    });
+                }
                 console.log(res);
                 this.setState({
                     keywordList: res.data

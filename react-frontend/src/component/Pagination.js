@@ -2,7 +2,7 @@ import React, {useState, Fragment, useEffect} from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-    margin: 0.5rem auto;
+    margin: 0.1rem auto;
     display: flex;
     align-items: center;
     width: 17rem;

@@ -2,10 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import { timeFormat } from '../util/util';
 
-const Item = styled.div`
+const Item = styled.li`
     margin: 1rem;
     border-bottom: 1px solid #ccc;
     padding: 2rem;
+    list-style: none;
+    @media (max-width: 600px) {
+        & {
+            padding: 0;
+        }
+    }
 `
 const Tags = styled.div`
     display: flex;
@@ -26,6 +32,11 @@ const Tags = styled.div`
 const Bottom = styled.div`
     display: flex;
     justify-content: space-around;
+    @media (max-width: 600px) {
+        & {
+            display: none;
+        }
+    }
 `
 
 export default function ResultItem(props) {

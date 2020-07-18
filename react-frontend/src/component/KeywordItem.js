@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import './animate.css';
 
-const Item = styled.div`
+const Item = styled.li`
     margin: 1rem;
     cursor: pointer;
     transform: translateX(-110%);
@@ -10,6 +10,7 @@ const Item = styled.div`
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 3px #ccc;
+    list-style: none;
     animation: leftIn 0.6s forwards;
     &:hover {
         background: #efefef;
@@ -29,5 +30,4 @@ export default function KeywordItem(props) {
             { props.keyword }
         </Item>
     )
-
 }

@@ -1,10 +1,11 @@
 import React from 'react';
 import KeywordItem from './KeywordItem';
 import styled from 'styled-components';
+import './animate.css';
 
 const Container = styled.div`
     width: 50%;
-    max-height: 80vh;    
+    max-height: 90vh;    
     margin: 1.5rem 0;
     position: relative;
     &::before {
@@ -16,10 +17,12 @@ const Container = styled.div`
         border-color: transparent  transparent #ccc transparent;
     }
     transition: all 0.6s ease;
+    animation: showUp 1s ease;
 `
 const Wrapper = styled.div`
-    max-height: 80vh;
-    margin: 0 2rem;
+    max-height: 90vh;
+    max-width: 50rem;
+    margin: 0 auto;
     border: 1px solid #ccc;
     border-radius: 1rem;
     overflow: auto;

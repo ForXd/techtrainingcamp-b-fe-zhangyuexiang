@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import './animate.css';
 
 const Container = styled.div`
     background:#bdc3c7;
@@ -16,6 +17,7 @@ const Container = styled.div`
         margin-left: 1rem;
         background:#bdc3c7;
     }
+    animation: bounceIn 2s ease;
 `
 
 const SearchIcon = styled.div`

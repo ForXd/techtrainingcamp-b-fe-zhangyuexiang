@@ -5,22 +5,17 @@ import Pagination from './Pagination';
 
 const Container = styled.div`
     width: 50%;
-    max-height: 80vh;
+    max-height: 90vh;
     overflow: hidden;
     position: relative;
-    &::before {
-        content: '';
-        width: 20px;
-        height: 80vh;
-        background: white;
-        position: absolute;
-        right: 2rem;
-    }
 `
-const Wrapper = styled.div`
-    max-height: 70vh;
-    margin: 0 2rem;
+const Wrapper = styled.ul`
+    list-style: none;
+    max-height: 80vh;
+    max-width: 50rem;
+    margin: 0 auto;
     overflow: auto;
+    padding: 0;
 `
 
 

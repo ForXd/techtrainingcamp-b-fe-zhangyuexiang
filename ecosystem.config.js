@@ -12,7 +12,7 @@ module.exports = {
       repo : 'https://github.com/ForXd/techtrainingcamp-b-fe-zhangyuexiang.git',
       path : '/home',
       'pre-deploy-local': '',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
+      'post-deploy' : 'cd koa-backend && npm install && pm2 reload ecosystem.config.js --env production',
       'pre-setup': ''
     }
   }
